@@ -4,15 +4,15 @@ import time
 
 class cm_scraper():
 
-  def __init__(self, year_link):
-    self.year_link = year_link
+  def __init__(self):
     self.brands = []
+    self.year_link = None
 
-  def scrap(self):
+  def scrap(self, year_link):
     start = time.time()
 
     #listing link for brands
-    page = requests.get(self.year_link)
+    page = requests.get(year_link)
     if page.status_code != 200:
       print("An error has ocurred in the main link")
     page_response = page.content
