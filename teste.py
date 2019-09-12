@@ -1,11 +1,10 @@
 from igscraper import IGscraper
 
+meuscrap = IGscraper()
 
-buscador = IGscraper()
+meuscrap.scrap('https://www.instagram.com/zenzi.mila/', 30)
 
-buscador.scrap("https://www.instagram.com/explore/tags/clothing/", 20)
-
-#print(buscador.profile)
+print(meuscrap.profile)
 
 '''
 from scrap import cm_scraper
