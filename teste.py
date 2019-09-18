@@ -1,17 +1,21 @@
-from igscraper import IGscraper
-
-meuscrap = IGscraper()
-
-meuscrap.scrap('https://www.instagram.com/zenzi.mila/', 30)
-
-print(meuscrap.profile)
 
 '''
-from scrap import cm_scraper
+from webscraper import scraper
 
-meu_scraper = cm_scraper()
+meuscrap = scraper()
 
-meu_scraper.scrap("https://fimi.es/en/galeriaspasarela/public/marcas?id=14&idferia=1&f=4")
+meuscrap.ig_scrap('https://www.instagram.com/zenzi.mila/', 20)
 
-print(meu_scraper.brands)
+print(meuscrap.ig_profile)
 '''
+
+
+
+
+from webscraper import scraper
+
+meu_scraper = scraper()
+
+meu_scraper.fmi_scrap("https://fimi.es/en/galeriaspasarela/public/marcas?id=14&idferia=1&f=4")
+
+print(meu_scraper.fmi_brands)
